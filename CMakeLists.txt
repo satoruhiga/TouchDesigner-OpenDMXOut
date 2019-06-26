@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 
 ###
 
-project(MyOperator)
+project(OpenDMXOut)
 
 set(OPERATOR_TYPE_CHOP 1)
 set(OPERATOR_TYPE_TOP 0)
@@ -20,6 +20,7 @@ link_directories(
 )
 
 set(LINK_LIBRARIES
+	ftd2xx.lib
 )
 
 file(GLOB SRC
