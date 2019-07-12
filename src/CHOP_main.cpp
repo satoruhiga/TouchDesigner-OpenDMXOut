@@ -172,7 +172,8 @@ public:
 	void stop()
 	{
 		running = false;
-		sender_thread.join();
+		if (sender_thread.joinable())
+			sender_thread.join();
 	}
 
 	bool sendBrake(bool yn)
